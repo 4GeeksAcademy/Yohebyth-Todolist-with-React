@@ -43,11 +43,15 @@ li, p{
     visibility: hidden;
     color: rgb(175, 105, 109);
 }
+.delete:hover{
+    opacity: 1 !important;
+}
 .input, .delete{
     border: none;
 }
 li:hover .delete{
     visibility:visible;
+    opacity: 0.5;
 }
 p{
     margin: 0 0;
