@@ -1,22 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
+import TodoList from "./todolist";
 
-const Home = () => {	
-
-	const [need, setNeed] = useState("");
-	const handleOnChange = (e) => {	
-		if(e.key === "Enter"){
-			if(e.target.value.trim() !== ""){
-				setNeed(e.target.value.trim());			
-			} else alert("The field cannot be empty");
-												
-		}		
-	}	
-
+const Home = () => {
 	return (
-		<div className="text-center">
-			<h1>Prueba</h1>		
-			<input type="text" placeholder="What needs to be done? " onKeyDown={ handleOnChange} />	
-			<ul>{need}</ul>
+		<div className="home text-center">			
+			<TodoList />
 		</div>
 	);
 };
