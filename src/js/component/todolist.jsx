@@ -16,14 +16,15 @@ const TodoList = () => {
             return [...newArray];
         })
     }
-   
+       
     return (
         <div className="container">
             <h1>To Do List</h1>
             <div className="list">
                 <input className="input" type="text" placeholder="What needs to be done? " onKeyDown={handleOnChange} />
                 <ul>
-                    {need.map((needParam) => (
+                    {
+                        need.map((needParam) => (
                         <li key={needParam}>
                             {needParam}
                             <button
