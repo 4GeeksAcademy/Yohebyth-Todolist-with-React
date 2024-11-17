@@ -3,11 +3,13 @@ import React, { useState } from "react";
 const TodoList = () => {
     const [need, setNeed] = useState([]);
     const handleOnChange = (e) => {
-        if (e.key === "Enter") {
-            if (e.target.value.trim() !== "") {
+        if (e.key === "Enter") {        
+            const yaExiste = need.find(needParam => needParam === e.target.value.trim())
+            console.log(yaExiste);   
+            if (e.target.value.trim() !== "" && yaExiste === undefined) {
                 setNeed([...need, e.target.value.trim()]);
                 e.target.value = "";
-            } else alert("The field cannot be empty");
+            } else alert("The field cannot be empty, nor can the value be repeated.");
         }
     }
     const deleteNeed = (needParam) =>{

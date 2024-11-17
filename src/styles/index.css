@@ -1,4 +1,4 @@
-body{
+body, .list, .delete{
     background-color: white;
 }
 .home{
@@ -14,48 +14,43 @@ h1{
 input{
     width: 100%;
     outline: none;
-    padding: 1rem 1rem 1rem 3rem;
-    border: none;
-    color: rgb(170, 170, 170);
 }
-input::placeholder{
+input, li{
+    padding: 1rem 1rem 1rem 3rem;
+}
+input, input::placeholder{
     color: rgb(170, 170, 170);
 }
 ul{
     margin-bottom: 0;
+    padding-left: 0;
 }
 .list{ 
     max-width: 450px;   
     margin: 1rem auto;
-    background-color: white;      
-    border: 1px solid rgb(244, 240, 241);  
-    text-align: start;
+    border: 1px solid rgb(244, 240, 241);
     color: rgb(170, 170, 170);
 }
 li{   
     display: flex;     
     justify-content: space-between;
-    margin: 0 0;
-    padding: 1rem 1rem 1rem 1rem;
-    text-align: start;
-    list-style-type: none;
-    border-top: 1px solid rgb(244, 240, 241);  ;
+    list-style-type: none;    
+}
+li, p{
+    border-top: 1px solid rgb(244, 240, 241);
 }
 .delete{
     visibility: hidden;
-    border: none;
     color: rgb(175, 105, 109);
-    background-color: white;
-    
-    
+}
+.input, .delete{
+    border: none;
 }
 li:hover .delete{
     visibility:visible;
-    opacity: 1;
 }
 p{
     margin: 0 0;
     padding: 1rem 1rem;
     text-align: start;
-    border-top: 1px solid rgb(244, 240, 241);
 }
