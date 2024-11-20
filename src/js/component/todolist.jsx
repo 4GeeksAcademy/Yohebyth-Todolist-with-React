@@ -27,13 +27,17 @@ const TodoList = () => {
                 <ul>
                     {
                         need.map((needParam) => {
-                            <li key={needParam}>
-                                {needParam}
-                                <button
-                                    className="delete"
-                                    onClick={() => { deleteNeed(needParam); }}
-                                ><i className="fa-solid fa-x" /></button>
-                            </li>
+                            return (
+                                <li key={needParam}>
+                                    {needParam}
+                                    <button
+                                        className="delete"
+                                        onClick={() => { deleteNeed(needParam); }}
+                                    >
+                                        <i className="fa-solid fa-x" />
+                                    </button>
+                                </li>
+                            )
                         })
                     }
                 </ul>
