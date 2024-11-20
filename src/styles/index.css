@@ -63,3 +63,8 @@ p{
     padding: 1rem 1rem;
     text-align: start;
 }
+.btn-success{
+    --bs-btn-border-color: #7dab96;
+    --bs-btn-bg: rgb(125 171 150 / 56%);
+    --bs-btn-hover-bg: #7dab96;
+}

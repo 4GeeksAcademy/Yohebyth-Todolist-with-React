@@ -43,6 +43,12 @@ const TodoList = () => {
                 </ul>
                 <p>{need.length} {need.length > 1 ? "items left" : "item left"}</p>
             </div>
+            <button 
+                type="button" 
+                className="btn btn-success"
+                onClick={() => {setNeed([])}}>
+                    Delete All
+            </button>
         </div>
     )
 }
